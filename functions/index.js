@@ -110,3 +110,32 @@ exports.onUserDelete = functions.region("asia-southeast1")
     functions.logger.log(`Successfully deleted user doc for ${user.uid}`);
     return null;
   });
+
+// 6. [ថ្មី] Function សម្រាប់ Admin ដើម្បីទាញយក User ទាំងអស់จาก Firestore
+exports.getAllUsers = functions.region("asia-southeast1")
+  .https.onCall(async (data, context) => {
+    // ពិនិត្យថាអ្នកហៅ Function នេះគឺជា Admin
+    if (context.auth.token.role !== "admin") {
+      throw new functions.https.HttpsError(
+        "permission-denied",
+        "You must be an admin to view all users."
+      );
+    }
+    
+    try {
+      const userDocs = await db.collection("users").orderBy("createdAt", "desc").get();
+      const users = userDocs.docs.map(doc => {
+        const userData = doc.data();
+        // បំលែង Timestamp ទៅជា ISO string ដើម្បីให้ងាយស្រួលប្រើក្នុង JS
+        return {
+          uid: doc.id,
+          ...userData,
+          createdAt: userData.createdAt ? userData.createdAt.toDate().toISOString() : null,
+        };
+      });
+      return { users };
+    } catch (error) {
+      functions.logger.error("Error getting all users:", error);
+      throw new functions.https.HttpsError("internal", "Unable to retrieve users.");
+    }
+  });
