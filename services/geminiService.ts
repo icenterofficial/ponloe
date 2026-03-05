@@ -1,6 +1,6 @@
 
 import { GoogleGenAI, Modality } from "@google/genai";
-import { Task } from '@/types';
+import { Task } from '../types';
 
 const apiKey = process.env.API_KEY || '';
 let aiInstance: any = null;
