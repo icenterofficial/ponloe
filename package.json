@@ -1,0 +1,48 @@
+{
+  "name": "ponloe.org",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx server.ts",
+    "build": "tsc && vite build",
+    "lint": "tsc --noEmit",
+    "preview": "vite preview",
+    "start": "node server.ts"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1002.0",
+    "@aws-sdk/lib-storage": "^3.1002.0",
+    "@google/genai": "^1.40.0",
+    "@hugeicons/core-free-icons": "^3.3.0",
+    "@hugeicons/react": "^1.1.5",
+    "@supabase/supabase-js": "^2.97.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "form-data": "^4.0.5",
+    "html-to-image": "^1.11.13",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^4.2.0",
+    "leaflet": "1.9.4",
+    "lucide-react": "^0.563.0",
+    "motion": "^12.34.3",
+    "multer": "^2.1.0",
+    "node-fetch": "^3.3.2",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "tsx": "^4.21.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.2.1",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.0.0",
+    "tailwindcss": "^4.2.1",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}
