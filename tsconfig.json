@@ -32,7 +32,8 @@
     "services",
     "contexts",
     "types.ts",
-    "vite.config.ts"
+    "vite.config.ts",
+    "server.ts"
   ],
   "exclude": ["node_modules", "dist"]
 }
