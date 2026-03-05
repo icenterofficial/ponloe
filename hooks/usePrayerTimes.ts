@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { LOCATION_DATA, DEFAULT_TIME_OFFSETS } from '@/components/prayer/data';
+import { LOCATION_DATA, DEFAULT_TIME_OFFSETS } from '../components/prayer/data';
 
 export interface PrayerData {
   date: {
