@@ -21,6 +21,11 @@
     "baseUrl": ".",
     "paths": {
       "@/*": [
+        "./src/*",
+        "./components/*",
+        "./hooks/*",
+        "./services/*",
+        "./contexts/*",
         "./*"
       ]
     },
