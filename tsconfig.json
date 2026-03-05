@@ -20,16 +20,19 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*",
-        "./components/*",
-        "./hooks/*",
-        "./services/*",
-        "./contexts/*",
-        "./*"
-      ]
+      "@/*": ["./*"]
     },
     "allowImportingTsExtensions": true,
     "noEmit": true
-  }
+  },
+  "include": [
+    "src",
+    "components",
+    "hooks",
+    "services",
+    "contexts",
+    "types.ts",
+    "vite.config.ts"
+  ],
+  "exclude": ["node_modules", "dist"]
 }
