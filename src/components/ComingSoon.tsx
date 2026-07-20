@@ -35,15 +35,15 @@ export const ComingSoon: React.FC = () => {
           <p className={`text-lg font-khmer ${
             theme === 'dark' ? 'text-indigo-300' : 'text-indigo-600'
           }`}>
-            ការងារដ៏សម្រស់ថ្មីៗកំពុងរៀបចំ
+            មានអ្វីថ្មីៗ មកដល់ពេលឆាប់ៗ
           </p>
         </div>
 
         {/* Description */}
-        <p className={`text-center mb-10 leading-relaxed ${
+        <p className={`text-center mb-10 leading-relaxed font-khmer ${
           theme === 'dark' ? 'text-slate-400' : 'text-gray-600'
         }`}>
-          យើងកំពុងងាក់ក្បាលធ្វើការដើម្បីនាំមកនូវការប្រលង្ខិតប្រលង្ខង់ដ៏ល្អប្រសើរសម្រាប់អ្នក។
+          យើងកំពុងរៀបចំនូវមុខងារថ្មីៗដ៏ស្អាត ឱ្យប្រើប្រាស់ដល់អ្នក
         </p>
 
         {/* Loading Indicator */}
@@ -66,10 +66,10 @@ export const ComingSoon: React.FC = () => {
             ? 'bg-slate-900 border border-slate-800'
             : 'bg-gray-50 border border-gray-200'
         }`}>
-          <p className={`text-sm font-medium ${
+          <p className={`text-sm font-medium font-khmer ${
             theme === 'dark' ? 'text-indigo-400' : 'text-indigo-600'
           }`}>
-            ⏳ ស្ថិតនៅក្នុងដំណើរការ
+            ⏳ សូមរង់ចាំបន្តិចទៀត
           </p>
         </div>
 
