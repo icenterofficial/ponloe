@@ -18,7 +18,7 @@
     "moduleDetection": "force",
     "allowJs": true,
     "jsx": "react-jsx",
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
       "@/*": ["./*"]
     },
@@ -27,11 +27,11 @@
   },
   "include": [
     "src",
-    "components",
-    "hooks",
-    "lib",
-    "services",
-    "contexts",
+    "src/components",
+    "src/hooks",
+    "src/lib",
+    "src/services",
+    "src/contexts",
     "types.ts",
     "vite.config.ts"
   ],
